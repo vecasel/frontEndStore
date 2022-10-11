@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+}
+:root{
+    --primary: #9c27b0;
+    --darkPrimary: #89119D;
+    --secondary: #FFCE00;
+    --secondaryDark: rgb(233,287,2);
+    --white: #FFF;
+    --black: #000;
+
+    --principalFont: "Staatliches", cursive;
+}
+/** Globals */
+body{
+    background-color: var(--primary);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1, h2, h3, h4,.buyContainer__title{
+    text-align: center;
+    color: var(--secondary);
+    font-family: var(--principalFont);
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+/** Header */
+.header{
+    display: flex;
+    justify-content: center;
+}
+.header__logo{
+    margin: 3rem 0;
+}
+/** Footer */
+.footer{
+    background-color: var(--darkPrimary);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer__text{
+    font-family: var(--principalFont);
+    font-size: 2.2rem;
+    text-align: center;
+}
+/** Navigation */
+.navigation{
+    background-color: var(--darkPrimary);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.navigation__link{
+    font-family: var(--principalFont);
+    color: var(--white);
+    font-size: 3rem;
+}
+.navigation__link--active,
+.navigation__link:hover{
+    color: var(--secondary);
+}
+/** Grid */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/** Product */
+.product{
+    background-color: var(--darkPrimary);
+    padding: 1rem;
+}
+.product__img{
+    width: 100%;
+}
+.product__name{
+    font-size: 4rem;
+}
+.product__price{
+    font-size: 2.8rem;
+    color: var(--secondary);
+}
+.product__name,
+.product__price{
+    font-family: var(--principalFont);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+/** Graphic */
+.graphic{
+    min-height: 30rem;
+    grid-column: 1 / 3;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.graphic--shirts{
+    grid-row: 2 / 3 ;
+    grid-column: 1 / 3;
+    background-image: url(../img/grafico1.jpg);
+}
+.graphic--node{
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8 / 9;
+} 
+@media (min-width: 768px){
+    .graphic--node{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    } 
+}
+/** About Us */
+.aboutusContainer{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 0 3rem;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-items: center;
+}
+.aboutusContainer__p{
+    width: 100%;
+    font-size: 1.6rem;
+}
+.aboutusContainer__img{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+@media (min-width: 768px){
+    .aboutusContainer{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    .aboutusContainer__img{
+        grid-column: 2 / 3;
+    }
+}
+/** Buy */
+.buyContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 5rem auto;
+    text-align: center;
+}
+.buyContainer__title{
+    font-size: 3rem;
+}
+.buyContainer__img{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.buyContainer__img h4{
+    font-size: 2rem;
+}
+@media (min-width: 768px){
+    .buyContainer__img{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+/** Product */
+.shirt__contents p{
+    padding: 2rem;
+}
+.shirt__img{
+    width: 100%;
+    text-align: center;
+}
+.form{
+    display: grid;
+    gap: 2rem;
+}
+@media (min-width: 768px){
+    .form{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.form__options{
+    border-color: var(--darkPrimary);
+    border-width: 1rem;
+    border-style: solid;
+    background-color: transparent;
+    color: var(--white);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    appearance: none;
+}
+.form__submit{
+    background-color: var(--secondary);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--principalFont);
+    padding: 2rem;
+    transition: background-color .2s ease;
+}
+.form__submit:hover{
+    cursor: pointer;
+    background-color: var(--secondaryDark);
+}
+@media (min-width: 768px){
+    .shirt{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
+    }
+}
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd Store</title>
+    <link rel="preload" href="/css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="logo">
+        </a>
+    </header>
+    <nav class="navigation">
+        <a class="navigation__link navigation__link--active" href="producto.html">Tienda</a>
+        <a class="navigation__link" href="nosotros.html">Nosotros</a>
+    </nav>
+    <main class="container">
+        <h1>React JS</h1>
+        <div class="shirt">
+            <div class="shirt__img" >
+                <img src="img/3.jpg" alt="shirtImage">
+            </div>
+            <div class="shirt__contents">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nam minus id enim tempora quam nulla reiciendis, omnis voluptate, facere dolorem tenetur quos voluptates accusamus! Labore nihil ipsa dolor quibusdam.</p>
+                <form class="form">
+                    <select class="form__options">
+                        <option disabled selected>--Seleccionar Talla--</option>
+                        <option>Chica</option>
+                        <option>Mediana</option>
+                        <option>Grande</option>
+                    </select>
+                    <input class="form__options" type="number" placeholder="Cantidad" min="1">
+                    <input class="form__submit" type="submit" value="Agregar al carrito">
+                </form>
+            </div>        
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">FrontEnd Store - Todos los derechos Reservados 2022.</p>
+    </footer>
+</body>
